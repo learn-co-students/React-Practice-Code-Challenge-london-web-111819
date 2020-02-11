@@ -11,7 +11,7 @@ body {
   grid-auto-rows: minmax(100px, auto);
   align-items: center;
   grid-template-areas: 
-      ". . . . ."
+      ". sm sm sm ."
       ". bt bt bt ."
       ". . rm . ."
       ". tb tb tb .";
@@ -62,9 +62,22 @@ body {
 
 }
 
+.wallet {
+  grid-area: sm;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
 .sushi {
   min-width: 150px;
   margin: auto;
+}
+
+.money {
+  height: 100px;
+  width: 150px;
+  margin: 0px;
 }
 
 .plate > img {
