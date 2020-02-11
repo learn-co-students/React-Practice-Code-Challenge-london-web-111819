@@ -24,8 +24,12 @@ class App extends Component {
         this.getSushi();
     }
 
-    handleButtonClick = () => {
+    handleButtonClickForward = () => {
         this.setState({ index: this.state.index + 4 });
+    };
+
+    handleButtonClickBackward = () => {
+        this.setState({ index: this.state.index - 4 });
     };
 
     handleSushiClick = (id) => {
@@ -87,7 +91,8 @@ class App extends Component {
 
                     />
                 <SushiContainer
-                    handleButtonClick={this.handleButtonClick}
+                    handleButtonClickForward={this.handleButtonClickForward}
+                    handleButtonClickBackward={this.handleButtonClickBackward}
                     handleSushiClick={this.handleSushiClick}
 
                     sushiList={sushiList}
